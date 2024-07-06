@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Definition for Travel Unmanaged'
+define service YUI_TRAVEL_U {
+  expose YC_TRAVEL_U  as Travel;
+  expose YC_BOOKING_U as Booking;
+  expose I_Currency   as Currency;
+  expose I_Country    as Country;
+}

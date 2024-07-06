@@ -1,0 +1,21 @@
+projection;
+strict ( 2 );
+
+define behavior for YC_TRAVEL_U alias Travel
+{
+  use create;
+  use update;
+  use delete;
+
+  use action set_status_booked;
+
+  use association _Booking { create; }
+}
+
+define behavior for YC_BOOKING_U alias Booking
+{
+  use update;
+  use delete;
+
+  use association _Travel;
+}
